@@ -1,5 +1,5 @@
 // Operadories relaciones
-var num1 = '6';
+var num1 = 6;
 var num2 = 6;
 var respuesta = Math.pow(num1,num2);
 console.log(respuesta);
@@ -21,4 +21,18 @@ console.log(respuesta);
 respuesta = num1 !== num2;
 console.log(respuesta);
 
+// menor que
+respuesta = num1 < num2;
+console.log(respuesta);
 
+// menor o igual que
+respuesta = num1 <= num2;
+console.log(respuesta);
+
+// mayor que
+respuesta = num1 > num2;
+console.log(respuesta);
+
+// mayor o igual que
+respuesta = num1 >= num2;
+console.log(respuesta);
