@@ -33,22 +33,23 @@ body{
             cursor: pointer;
             z-index: 1;
             &::before{
-                content: ' ';
+                content: '';
+                position: absolute;
                 height: 30px;
                 width: 30px;
                 top: 50%;
                 transform: translate(-50%, -50%);
                 border-radius: 50%;
-                background: #333;
+                background: #666;
                 z-index: -1;
+                cursor: pointer;
             }
-        }
-        &.active{
-            color: #333;
-            &::before{
-                background: #fff;
+            &.active{
+                color: #333;
+                &::before{
+                    background-color: #fff;
+                }
             }
-
         }
         #display{
             color: #0a1e23;
@@ -107,6 +108,7 @@ body{
     }
 }
 
+
 button{
     height: 60px;
     width: 60px;
@@ -119,6 +121,7 @@ button{
         transform: scale(1.1);
     }
 }
+
 
 /*dark*/
 

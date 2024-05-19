@@ -36,20 +36,22 @@ body {
   z-index: 1;
 }
 .container .calculator .theme-toggler::before {
-  content: " ";
+  content: "";
+  position: absolute;
   height: 30px;
   width: 30px;
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: #333;
+  background: #666;
   z-index: -1;
+  cursor: pointer;
 }
-.container .calculator.active {
+.container .calculator .theme-toggler.active {
   color: #333;
 }
-.container .calculator.active::before {
-  background: #fff;
+.container .calculator .theme-toggler.active::before {
+  background-color: #fff;
 }
 .container .calculator #display {
   color: #0a1e23;
