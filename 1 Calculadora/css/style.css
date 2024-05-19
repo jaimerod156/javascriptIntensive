@@ -1,1 +1,120 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #f06291, #fff);
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container .calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  box-shadow: 0 0 30px rgb(187, 130, 130);
+  border-radius: 10px;
+  background: #fff;
+}
+.container .calculator .theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+.container .calculator .theme-toggler::before {
+  content: " ";
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #333;
+  z-index: -1;
+}
+.container .calculator.active {
+  color: #333;
+}
+.container .calculator.active::before {
+  background: #fff;
+}
+.container .calculator #display {
+  color: #0a1e23;
+  margin: 0 10px;
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.container .calculator #clear {
+  background: #ffd5d8;
+  color: #fc4552;
+}
+.container .calculator .btn-number {
+  background: #c3eaff;
+  color: #000000;
+}
+.container .calculator .btn-operator {
+  background: #ffd0fb;
+  color: #e967f3;
+}
+.container .calculator .btn-equal {
+  background-color: #adf9e7;
+  color: #000;
+  height: 130px;
+}
+.container .calculator.dark {
+  background: #181818;
+}
+.container .calculator.dark #display {
+  color: #f8fafb;
+}
+.container .calculator.dark #clear {
+  background: #4c35aa;
+  color: #fff;
+}
+.container .calculator.dark .btn-number {
+  background: #8efda6;
+  color: #000;
+  font-weight: 600;
+}
+.container .calculator.dark .btn-operator {
+  background: #f0d84f;
+  color: #aa00a4;
+}
+.container .calculator.dark .btn-equal {
+  background: #f23b00;
+  color: #fff;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+/*dark*//*# sourceMappingURL=style.css.map */

@@ -1,6 +1,5 @@
 const display = document.querySelector("#display");
 const buttons = document.querySelectorAll("button")
-display.innerText = "0";
 
 buttons.forEach((button) =>{
     button.onclick = ()=>{
