@@ -14,8 +14,13 @@
   height: 100vh;
   display: flex;
   background: #111;
-  opacity: 1;
+  visibility: hidden;
+  opacity: 0;
   transition: 0.2s;
+}
+.navigation.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .navArea {
@@ -113,6 +118,12 @@
   z-index: 10000;
   cursor: pointer;
   border-radius: 8px;
+}
+.menuToggle.active {
+  background: #000 url("../images/close.png") no-repeat;
+  background-size: 25px;
+  background-position: center;
+  filter: invert(1);
 }
 
 @media (max-width: 768px) {
