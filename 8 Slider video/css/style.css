@@ -9,4 +9,84 @@
 section {
   background: #111;
   min-height: 100vh;
+}
+section .banner-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section .banner-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  opacity: 0;
+}
+section .banner-video video.active {
+  opacity: 1;
+}
+section .container {
+  position: relative;
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-tracks: center;
+  z-index: 1;
+  min-height: 100vh;
+}
+section .container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 10px 0 15px rbga(0, 0, 0, 0.05);
+}
+section .container header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+section .container header .logo {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+section .container header ul {
+  position: relative;
+  display: flex;
+  list-style: none;
+}
+section .container header ul li {
+  margin: 0 20px;
+}
+section .container header ul li a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 4px 10px;
+}
+section .container header ul li a:hover {
+  background: #fff;
+  color: #111;
+}
+section .container header ul li a.active {
+  background: #fff;
+  color: #111;
 }/*# sourceMappingURL=style.css.map */
