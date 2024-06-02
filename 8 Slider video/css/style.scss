@@ -32,9 +32,8 @@ section{
         position: relative;
         padding: 0 100px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-tracks: center;
-        z-index: 1;
         min-height: 100vh;
         &::before{
             content: '';
@@ -65,9 +64,9 @@ section{
             ul{
                 position: relative;
                 display: flex;
-                list-style: none;
                 li{
                     margin: 0 20px;            
+                    list-style: none;
                     a{
                         position: relative;
                         color: #fff;
@@ -86,10 +85,137 @@ section{
                     }
                 }
             }
+            .menu-icon{
+                display: none;
+
+            }
         }
-        .content{
-        }
+         .content{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            .banner-text{
+                position: relative;
+                max-width: 700px;
+                div{
+                    display: none;
+                    transition: 0.5s ease-in-out;
+                    h2{
+                        color: #fff;
+                        font-size: 6em;
+                        line-height: 1em;
+                        font-weight: 700;
+                    }
+                    p{
+                        color: #fff;
+                        font-size: 18px;
+                        margin: 20px 0;
+                    }
+                    &.active{
+                        display: initial;
+                    }
+                
+                }
+            }
+         }
+         .controls{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            display: flex;
+            list-style: none;
+            li{
+                background: #fff;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover{
+                    background: #f5f5ff;
+                }
+            }
+            
+         }
 
     }
 }
 
+@media (max-width: 991px){
+    section{
+        .container{
+            padding: 20px;
+            &::before{
+                width: 100%;
+            }
+            header{
+                padding: 10px 20px;
+                ul{
+                    position:fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh;
+                    background: #fff;
+                    z-index: 1000;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    li{
+                        text-align: center;
+                        margin: 10px;
+                        a{
+                             color: #333;
+                             font-size: 1.5em;
+                             &:hover{
+                                color: #f00 !important;
+                                
+                             }
+                        }
+                    }
+                }
+                .menu-icon{
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: 50px;
+                    height: 50px;
+                    display: initial;
+                    z-index: 1000;
+                    background: #fff url(../img/menu.png) no-repeat center;
+                    background-size: 30px;
+                    cursor: pointer;
+                    &.active{
+                        background: #fff url(../img/close.png) no-repeat center;
+                        background-size: 25px;
+                        cursor: pointer;
+                    }
+                }
+                &.active{
+                    ul{
+                        display: flex;
+                    }
+                }
+            }
+            .content{
+                .banner-text{
+                    max-width: 100%;
+                    text-align: center;
+                    div{
+                        h2{
+                            font-size: 3em;
+                        }
+                    }
+                }
+            }
+            .controls{
+                li{
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+    }
+}
