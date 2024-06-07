@@ -1,7 +1,7 @@
 const keys = [...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'];
 
 function getRandomNumber(min, max){
-    min = Math.ceil(min)
+    min = Math.ceil(min);
     //0.95 -> Math.ceil(0.95)=1
     max = Math.floor(max);
     return Math.floor(Math.random() * (max -min +1)) + min; 
@@ -13,8 +13,7 @@ function getRandomKey(){
 
 function targetRandomKey(){
     const key = document.getElementById(getRandomKey());
-    key.classList.add("selected");
-    console.log(key.id);
+    key.classList.add("selected");    
 }
 
 
