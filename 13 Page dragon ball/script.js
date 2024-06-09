@@ -1,3 +1,11 @@
+setTimeout(()=>{
+    document.getElementById('loading-page').classList.add('loaded');
+    document.getElementById('loader').classList.add('opzero');
+    document.getElementById('lastray').classList.add('finalray');
+    document.body.className +='whitebk'
+
+},6500)
+
 gsap.to('#bg',{
     scrollTrigger:{
         scrub:1
