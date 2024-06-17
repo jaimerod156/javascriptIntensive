@@ -1,4 +1,45 @@
 document.addEventListener("DOMContentLoaded",function(){
+
+    const fetchPokemons = async (endpoint)=>{
+        let data;
+        try{
+            const response = await fetch(endpoint,{
+                method:"GET",
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            })
+            data = await response.json();
+        }catch(error){
+            alert(error);
+        }
+        return data.pokemon_species;
+    }
+
+    const ordernumber = (str) =>{
+        let mySubstring = str.substring(str.lastIndexOf("s/") +2,str.lastIndexOf("/"));
+        return mySubstring;
+    }
+
+    // const cadena = "https://pokeapi.co/api/v2/pokemon-species/32/";
+    // console.log(cadena.substring(cadena.lastIndexOf("s/") +2,cadena.lastIndexOf("/")));
+    
+
+    const getPokemons = async (numero)=>{
+        let endpoint = `https://pokeapi.co/api/v2/generation/${numero}/`;
+        let container = document.getElementById("container");
+        container.innerHTML = "";
+        let pokemons = [];
+        pokemons = await fetchPokemons(endpoint);
+        pokemons.forEach( (element) => {
+            
+        });
+        console.log(pokemons)
+
+    }
+    getPokemons(1);
+    
+
     var geners = [
         "generation-1",
         "generation-2",
@@ -18,3 +59,4 @@ document.addEventListener("DOMContentLoaded",function(){
     }
     filters.innerHTML = gen;
 })
+
