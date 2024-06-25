@@ -25,4 +25,6 @@ const sr =ScrollReveal({
     reset: true
 }) 
 sr.reveal(`.home-swiper, .new-swiper, .newsletter__container`)
+sr.reveal(`.category__data, .trick__content, .footer__content`,{interval:200})
+sr.reveal(`.about__data, .discount__img`,{origin:"left"})
 
