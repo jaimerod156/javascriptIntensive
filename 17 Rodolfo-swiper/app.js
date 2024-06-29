@@ -1,0 +1,22 @@
+const swiper = new Swiper('.swiper-container', {
+    // Optional parameters
+    effect:"coverflow",
+    direction: 'horizontal',
+    loop: true,
+    grabCursor:true,
+    centeredSlides:true,
+    slidesPerView:"auto",
+    coverflowEffect:{
+        rotate: 20,
+        stretch: 0,
+        depth: 350,
+        modifier: 1,
+        slideShadows: true,
+    },
+  
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+  });
