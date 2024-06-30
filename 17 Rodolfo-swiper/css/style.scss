@@ -10,6 +10,7 @@ body{
     background-color: #9147ff;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 .swiper-container {
     width: 100%;
@@ -38,10 +39,9 @@ body{
         }
     }
 }
-.swiper-pagination-bullets{
+.swiper-pagination-bullet{
     width: 10px;
     height: 10px;
-    display: block;
     border-radius: 10px;
     transition: all .3s;
 }
