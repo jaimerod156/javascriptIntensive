@@ -71,6 +71,14 @@
   height: 1px;
   background: #c69684;
   width: 100%;
+  animation: liquido 2.59s infinite;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 @keyframes load {
@@ -88,5 +96,32 @@
   }
   100% {
     top: 4.5rem;
+  }
+}
+@keyframes liquido {
+  0% {
+    opacity: 0;
+    top: -0.9rem;
+  }
+  22% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  35% {
+    height: 3px;
+  }
+  55% {
+    height: 4px;
+  }
+  60% {
+    height: 5px;
+  }
+  96% {
+    height: 5.5px;
+  }
+  100% {
+    height: 0;
   }
 }/*# sourceMappingURL=style.css.map */
