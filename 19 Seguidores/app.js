@@ -1,6 +1,6 @@
-const counterEl = document.querySelectorAll('.counter');
+const counterElements = document.querySelectorAll('.counter');
 
-counterEl.forEach((item) =>{
+counterElements.forEach((item) =>{
     item.innerText = '0';
     const target = +item.getAttribute('data-target');
     const interval = target/100
