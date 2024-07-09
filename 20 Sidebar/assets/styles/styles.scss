@@ -175,6 +175,42 @@ img{
     &__logout{
         margin-top: .5rem;
     }
+
+    /*Dropdown*/
+    &__dropdown {
+        overflow: hidden;
+        max-height: 21px;
+        transition: .4s ease-in-out;
+        &-collapse{
+            background: var(--first-color-light);
+            border-radius: .25rem;
+            margin-top: 1rem;
+        }
+        &-content{
+            display: grid;
+            row-gap: .5rem;
+            padding: .75rem 2.5rem .75rem 1.8rem;
+        }
+        &-item{
+            font-size: var(--small-font-size);
+            font-weight: var(--font-medium);
+            color: var(--text-color);
+            &:hover{
+                color: var(--first-color);
+            }
+        }
+        &-icon{
+            margin-left: auto;
+            transition: .4s;
+        }
+        &:hover{
+            max-height: 100rem;
+        }
+        &:hover &-icon{
+            transform: rotate(180deg);
+        }
+
+    }
 }
 /*Media Queries*/
 @media screen and (max-width: 320px) {
