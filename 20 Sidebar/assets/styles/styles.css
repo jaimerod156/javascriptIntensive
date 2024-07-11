@@ -212,6 +212,15 @@ img {
   transform: rotate(180deg);
 }
 
+/*clases agregadas con JS*/
+.show-menu {
+  left: 0;
+}
+
+.active {
+  color: var(--first-color);
+}
+
 /*Media Queries*/
 @media screen and (max-width: 320px) {
   .header__search {
