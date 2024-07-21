@@ -59,9 +59,6 @@ ul {
     padding: 1.5em 2em;
     transition: 400ms background ease;
     
-    &:hover {
-        background: hsla(var(--hsl), 0.1);
-    }
 
     &:nth-child(1) {
         --hue: 165;
@@ -79,6 +76,11 @@ ul {
         --hue: 338.69;
         --saturacion: 100%;
         --luminosidad: 48.04%;
+    }
+
+    &:hover {
+        --luminosidad: 95%;
+        background: hsla(var(--hsl), 0.1);
     }
 
     .card__heading {
@@ -128,15 +130,20 @@ ul {
     pointer-events: none;
     user-select: none;
     opacity: var(--opacity, 0);
+    -webkit-mask: radial-gradient(
+        25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%
+    );
     mask: radial-gradient(
         25rem 25rem at var(--x) var(--y), #000 1%, transparent 50%
     );
+    transition: 0.4s ease;
     .card{
         background: hsla(var(--hsl), 0.25);
         border-color: hsla(var(--hsl), 1);
         box-shadow: 0 0 0 1px inset hsla(var(--hsl));
     }
     .cta{
+        grid-row:  -1;
         display: block;
         width: 100%;
         background: hsl(var(--hsl));

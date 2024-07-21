@@ -9,12 +9,34 @@ const applyOverlayMask = (e) =>{
     const y = e.pageY - cardsContainer.offsetTop;
     overlayEl.style = `--opacity:1; --x:${x}px; --y:${y}px;`; 
     
+};
+
+const observer = new ResizeObserver((entries) =>{
+    entries.forEach((entry)=>{
+        const cardIndex = cards.indexOf(entry.target)
+        let width = entry.borderBoxSize(0).inlineSize;
+        let height = entry.borderBoxSize(0).blockSize;
+        if(cardIndex>=0){
+            overlay.children[cardIndex].style.width=`${width}px`
+            overlay.children[cardIndex].style.height=`${height}px`
+        }
+    })
+})
+
+const createOverLayCta = (overLayCard, ctaEl) =>{
+    const overLayCta = document.createElement('div');
+    overLayCta.classList.add(`cta`);
+    overLayCta.textContent = ctaEl.textContent;
+    overLayCard.append(overLayCta);
+
 }
 
-const initOverLayCard = ()=>{
+const initOverLayCard = (cardEl)=>{
     const overLayCard = document.createElement('div');
     overLayCard.classList.add("card");
+    createOverLayCta(overLayCard, cardEl.lastElementChild)
     overlay.append(overLayCard);
+    observer.observe(cardEl)
 
 }
 cards.forEach(initOverLayCard)
